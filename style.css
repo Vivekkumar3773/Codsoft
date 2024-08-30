@@ -1,0 +1,630 @@
+/* This is starting my styling/Css coding for this portfolio/project */
+*{                 /* This will remove the default margin and padding from all elements on the html page*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+:root{      /* This is my color elements .I was used once color elements with the help of root elements*/
+  --bg-color : #F4A261;  
+  --second-bg-color : #D1495B;
+  --text-color : #FFFFFF;
+  --main-color : #FFFFFF; 
+}
+html {   /* This is my basic html page styling */
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body{  /* This is for my body styling */
+  background:var(--bg-color);
+  color: var(--text-color);
+}
+section{  /* this is for my html sections styling */
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+.header{    /* this is for my header sections styling or .(dot) means class*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.header .sticky{    /* this is a part of styling */
+  border-bottom: .1rem solid rgba(0,0,0,.2);
+}
+.logo{   /* this is for logo styling */
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: default;
+}
+.navbar a{ /* this is for navbar styling */
+  font-size: 1.7rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  transition: .3s;
+}
+.navbar a:hover,
+.navbar a.active {  /* this is a part of styling */
+  color: var(--second-bg-color);
+}
+#menu-icon{  /* this is for menu-image styling #(hashtag) means id*/
+  font-size: 3.6rem;
+  color: var(--text-color);
+  display: none;
+}
+.home{  /* this is a home part of styling for my portfolio*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-img img{  /* this is image styling */
+  width: 35vw;
+  animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage{    /* this is a part of floatingimage styling with the help of html and javascript*/
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-2.4rem);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.home-content h3{  /* this is a part of styling */
+  font-size: 3.2rem;
+  font-size: 700;
+}
+.home-content h3:nth-of-type(2){
+  margin-bottom: 2rem ;
+}
+span{  /* this is for span tag styling */
+  color: var(--main-color);
+}
+.home-content h1{ /* this is a part of styling */
+  font-size: 5.6rem;
+  font-size: 700;
+  line-height: 1.3;
+}
+.home-content p{ /* this is a part of styling */
+  font-size: 1.6rem;
+}
+.social-media a{ /* this is for social-media tag styling */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: .2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .5s ease;
+}
+.social-media a:hover{    /* this is a part of styling */
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+.btn{    /* this is for button styling */
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--second-bg-color);
+  letter-spacing: .1rem;
+  font-weight: 600;
+  transition: .5s ease;
+}
+.btn:hover {   /* this is a part of styling */
+  box-shadow: none;
+}
+.about{   /* this is a about section styling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: var(--second-bg-color);
+}
+.about-img img {  /* this is a part of styling */
+  width: 35vw;
+  animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage{  /* this is a about sections image styling */
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-2.4rem);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.heading{  /* this is a part of styling */
+  text-align: center;
+  font-size: 4.5rem;
+}
+.about-content h2{
+  text-align: left;
+  line-height: 1.2;
+}
+.about-content h3{
+  font-size: 2.6rem;
+}
+.about-content p{  /* this is a part of styling */
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+.services h2{
+  margin-bottom: 5rem;
+}
+.services-conatiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.services-conatiner .services-box{ /* this is a part of styling */
+  flex: 1 1 30rem;
+  background: var(--second-bg-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: .2rem solid var(--bg-color);
+  transition: .5s ease;
+}
+.services-conatiner .services-box:hover{
+  border-color: var(--main-color);
+  transform: scale(1.02);
+}
+.services-box i{
+  font-size: 7rem;
+  color: var(--main-color);
+}
+.services-box h3{
+  font-size: 2.6rem;
+}
+.services-box p{
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+}
+.skills{  /* this is for my skills sections styling */
+  background: var(--second-bg-color);
+}
+.skill-main{
+  padding: 8%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-row-gap: 30px;
+  grid-column-gap: 50px;
+}
+.skill-bar{
+  margin-bottom: 2.3rem;
+}
+.skill-main h3{  /* this is a part of styling */
+  margin-bottom: 2rem;
+  font-size: 30px;
+  text-align: center;
+}
+.skill-left .skill-bar .info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 25px;
+}
+.skill-left .skill-bar .bar{
+  width: 100%;
+  height: 10px;
+  background-color: var(--bg-color);
+  border-radius: 25px;
+  margin-top: 10px;
+  position: relative;
+}
+.skill-bar .bar span{  /* this is a part of styling */
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background: var(--main-color);
+  border-radius: 25px;
+  box-shadow: 0 4px 8px var(--main-color);
+}
+.skill-bar .bar .html{
+  width: 90%;
+  animation: html 2s;
+}
+.skill-bar .bar .css{
+  width: 85%;
+  animation: css 3s;
+}
+.skill-bar .bar .javascript{
+  width: 75%;
+  animation: javascript 4s;
+}
+.skill-bar .bar .mern{  /* this is a part of styling */
+  width: 70%;
+  animation: mern 5s;
+}
+.professional{  /* this is for my professional sections styling */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.box{
+  position: relative;
+  margin: 10px 0;
+  flex: 1 1 15rem;
+}
+.box .text{  /* this is a part of styling */
+  text-align: center;
+  color: var(--main-color);
+  font-size: 2.5rem;
+}
+.box .text big{
+  font: 400;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box .text small{
+  display: block;
+  font-weight: 600;
+}
+.circle{  /* this is a  circle in my javascript(script) file styling */
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle .points{
+  width: 2px;
+  height: 10px;
+  background-color: var(--bg-color);
+  position: absolute;
+  border-radius: 3px;
+  transform: rotate(calc(var(--i)*var(--rot))) translateY(-45px);
+}
+.points.marked{  /* this is a part of styling */
+  animation: glow 0.04s linear forwards;
+  animation-delay: calc(var(--i)*0.05s);
+}
+.projects {  /* this is my projects styling */
+  background: var(--bg-color);
+}
+.projects h2{
+  margin-bottom: 4rem;
+}
+.projects-container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+.projects-container .projects-box{
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--bg-color);
+  overflow: hidden;
+  display: flex;
+}
+.projects-box img{ /* this is a part of styling */
+  width: 100%;
+  transition: .5s ease;
+}
+.projects-box:hover img{
+  transform: scale(1.1);
+}
+.projects-box .projects-layer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(rgba(0,0,0,.1), var(--main-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: .5s ease;
+}
+.projects-box:hover .projects-layer {  /* this is a part of styling */
+  transform: translateY(0);
+}
+.projects-layer h4{
+  font-size: 3rem;
+}
+.projects-layer p{
+  font-size: 1.6rem;
+  margin: .3rem 0 1rem;
+}
+.projects-layer a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: var(--text-color);
+  border-radius: 50%;
+}
+.projects-layer a i{
+  font-size: 2rem;
+  color: var(--second-bg-color);
+}
+.contact{
+  background: var(--second-bg-color);
+}
+.contact h2{
+  margin-bottom: 3rem;
+}
+.contact form{
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+input::placeholder {
+  color: white; /* Change placeholder text color to white */
+}
+textarea::placeholder {
+  color: white; /* Change placeholder text color to white */
+}
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--bg-color);
+  border-radius: .8rem;
+  margin: .7rem 0;
+}
+.contact form .input-box input {
+  width: 49%;
+}
+.contact form textarea {
+  resize: none;
+}
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.footer{  /* this is for my footer sections styling */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--bg-color);
+}
+.footer-text p{
+  font-size: 1.6rem;
+}
+.footer-iconTop a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: .8rem;
+  background: var(--main-color);
+  border-radius: .8rem;
+  transition: .5s ease;
+}
+.footer-iconTop a:hover{  /* this is a part of styling */
+  box-shadow: 0 0 1rem var(--main-color);
+}
+.footer-iconTop a i{
+  font-size: 2.4rem;
+  color: var(--second-bg-color);
+}
+ /* This sections is very importent sections. To show my Responsiveness for my portfolio/project */
+@media (max-width: 1200px){
+  html{
+    font-size: 55%;
+  }
+}
+@media (max-width: 991px){
+  .header {
+    padding: 2rem 3%;
+  }
+  section {
+    padding: 10rem 3% 2rem;
+  }
+  .contact {
+    min-height: auto;
+  }
+  .skills{
+    padding: 3rem ;
+  }
+  .projects {
+    padding-bottom: 7rem;
+  }
+  .services{
+    padding-bottom: 7rem;
+  }
+  .footer {
+    padding: 2rem 3%;
+  }
+}
+@media (max-width: 768px){
+  #menu-icon{
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: .1rem solid rgba(0,0,0,.2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    display: none;
+  }
+  .navbar.active{
+    display: block;
+  } 
+  .navbar a{
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  .home {
+    flex-direction: column;
+  }
+  .home-content h3{
+    font-size: 2.6rem;
+  }
+  .home-content h1{
+    font-size: 5rem;
+  }
+  .home-img img{
+    width: 70vw;
+    margin-top: 4rem;
+  }
+  .about{
+    flex-direction: column-reverse;
+  }
+  .about img {
+    width: 70vw;
+    margin-top: 4rem;
+  }
+  .services h2{
+    margin-bottom: 3rem;
+  }
+  .professional {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    /* Add any other common styles here */
+  }
+  .circle {
+    text-align: center;
+    width: 95%; /* Adjust circle size */
+    height: 80%;
+  }
+  .projects h2{
+    margin-bottom: 3rem;
+  }
+  .projects-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 617px) {
+  .projects-container{
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 450px){
+  html{
+    font-size: 50%;
+  }
+  .contact form .input-box input{
+    width: 100%;
+  }
+}
+@media (max-width: 365px){
+  .home-img img{
+    width: 90vw;
+  }
+  .about-img img{
+    width: 90vw;
+  }
+  .footer {
+    flex-direction: column-reverse;
+  }
+  .footer p{
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+.spin-icon {
+  display: inline-block;
+  animation-name: wave-animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform-origin: 100% 100%;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0.0deg); }
+  10% { transform: rotate(14.0deg); }
+  20% { transform: rotate(-8.0deg); }
+  30% { transform: rotate(14.0deg); }
+  40% { transform: rotate(-4.0deg); }
+  50% { transform: rotate(10.0deg); }
+  60% { transform: rotate(0.0deg); }
+  100% { transform: rotate(0.0deg); }
+}
+@keyframes html{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 90%;
+  }
+}
+@keyframes css{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 85%;
+  }
+}
+@keyframes javascript{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 75%;
+  }
+}
+@keyframes mern{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 70%;
+  }
+}
+@keyframes glow{
+  0%{
+    background: var(--bg-color);
+    box-shadow: none;
+  }
+  100%{
+    background: var(--main-color);
+    box-shadow: 0 6px 12px var(--main-color); 
+  }
+}
+/* This is my last CSS coding for my portfolio */
